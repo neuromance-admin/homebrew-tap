@@ -1,31 +1,31 @@
 class Ghostit < Formula
   desc "Encrypt any folder on your drive. No account. No server. Your key, your data."
   homepage "https://github.com/neuromance-admin/ghostit"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/neuromance-admin/ghostit/releases/download/v0.1.0/ghostid-macos-arm.tar.gz"
-      sha256 "b6674ee31578d18064ac56f2d2f826174a44e588b27efb7e7868cc038d37d9f7"
+      url "https://github.com/neuromance-admin/ghostit/releases/download/v0.1.1/ghostit-macos-arm.tar.gz"
+      sha256 "f8eef5fbe230d559f3100a0d68b3b1f1d3475fbb6b55b0baa55e60e094100a00"
     else
-      url "https://github.com/neuromance-admin/ghostit/releases/download/v0.1.0/ghostid-macos-intel.tar.gz"
-      sha256 "d95808c728284200890eee4405ef592b39c3c4344b1077566a7cb5ebbf34c728"
+      url "https://github.com/neuromance-admin/ghostit/releases/download/v0.1.1/ghostit-macos-intel.tar.gz"
+      sha256 "e6bdb0d095ca512683eea01052fbe440ec27689b6b690f8cd0ba4587f83346b6"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/neuromance-admin/ghostit/releases/download/v0.1.0/ghostid-linux-arm64.tar.gz"
-      sha256 "f8f8bb40ce7ebc4f625fe951149142d3b2c3744778401d0e793b7d747060c2a5"
+      url "https://github.com/neuromance-admin/ghostit/releases/download/v0.1.1/ghostit-linux-arm64.tar.gz"
+      sha256 "8f4f4e217a38cb063d264bf824e364d4448ec3136d3f779c686d18697ae3a270"
     else
-      url "https://github.com/neuromance-admin/ghostit/releases/download/v0.1.0/ghostid-linux-x86_64.tar.gz"
-      sha256 "708d75764cee3921b173d6d574d4003102d0fd00ee37205e014e1d27d9f52989"
+      url "https://github.com/neuromance-admin/ghostit/releases/download/v0.1.1/ghostit-linux-x86_64.tar.gz"
+      sha256 "6f6f9a21b62a449850e1b425d03d1a46aa627d644e5234ed2e6b00aed7ed7c88"
     end
   end
 
   def install
-    bin.install "ghostid" => "ghostit"
+    bin.install "ghostit"
   end
 
   test do
